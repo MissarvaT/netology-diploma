@@ -16,7 +16,6 @@ body {
   font-family: OpenSans, sans-serif;
   margin: 0;
   width: 100%;
-  overflow: auto;
 }
 
 .header {
@@ -61,7 +60,9 @@ body {
   text-transform: uppercase;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -105,10 +106,6 @@ p {
   text-transform: uppercase;
 }
 
-.image-container {
-  text-align: center;
-}
-
 .article-number {
   color: #000000;
   font-weight: 700;
@@ -128,29 +125,32 @@ p {
   text-transform: uppercase;
 }
 
-.article:nth-child(3n + 3) {
+.article:nth-child(3n + 1) {
   background-color: #fafafa;
 }
 
-.article:nth-child(3n + 4) {
+.article:nth-child(3n + 2) {
   background-color: #f5f4f9;
 }
 
-.article:nth-child(3n + 5) {
+.article:nth-child(3n + 3) {
   background-color: #5e42b0;
   color: #ffffff;
 }
 
-.players-section > article:nth-child(3n + 5) {
+.players-section article:nth-child(3n + 3) {
   background-color: #090c35;
   color: #ffffff;
 }
 
-.players-section > article:nth-child(3n + 5) .article-number {
+.players-section
+  > .articles-container
+  > article:nth-child(3n + 3)
+  .article-number {
   color: #8765dd;
 }
 
-.article:nth-child(3n + 5) .article-number::after {
+.article:nth-child(3n + 3) .article-number::after {
   content: "";
   display: block;
   background-color: #ffffff;
@@ -176,7 +176,10 @@ p {
   background-color: #5e42b0;
   color: #f5f6f7;
   font-weight: 700;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-number::after {
@@ -233,195 +236,207 @@ p {
   text-transform: uppercase;
 }
 
-@media (max-width:640px) {
+@media (max-width: 640px) {
   .header {
-  height: 177.5vw;
-  background-image: url(https://github.com/netology-code/mq-diploma/blob/fe788ca482ae2cb8f2ebb37667b643b1bc475253/sources/img/football_767.jpg?raw=true);
-}
+    height: 177.5vw;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/football_767.jpg);
+  }
 
-.logo {
-  width: 41.5vw;
-}
+  .logo {
+    width: 41.5vw;
+  }
 
   .header .logo {
     padding-top: 10.62vw;
   }
 
-.greeting-container {
-  margin-top: 39vw;
-  margin-bottom: 28.12vw;
-  font-size: 6.25vw;
+  .greeting-container {
+    margin-top: 39vw;
+    margin-bottom: 28.12vw;
+    font-size: 6.25vw;
   }
 
-.greeting1 {
-  padding-left: 6.2vw;
-}
-.greeting2 {
-  padding-left: 14vw;
-}
-
-h2, h3, h4 {
-  margin: 0;
-}
-
-.button {
-  width: 87.5%;
-  height: 6.45%;
-  padding-top: 1.65%;
-  padding-bottom: 1.65%;
-  border-radius: 4.68vw;
-  font-size: 2.5vw;
-  color: #ffffff;
-}
-  
-  .button:nth-child(n+2) {
-  margin-top: 4.37vw;
-}
-  
-.store-logo {
-  width: 6.87vw;
-  height: 7.5vw;
-  margin-right: 2.5vw;
-}
-
-.section-title {
-  font-size: 15.62vw;
-  height: 11.25vw;
-  margin-top: 6.88vw;
-  margin-bottom: 5.62vw;
-  padding-left: 6.25vw;
-}
-
-.section-image {
-  margin-top: 6.25vw;
-  margin-bottom: -17vw;
-}
-
-.article-number {
-  font-size: 4.37vw;
-  margin-right: 3.12vw;
-}
-
-.article-number::after {
-  height: 1.25vw;
-  border-radius: 0.31vw;
-  background-color: #5e42b0;
+  .greeting1 {
+    padding-left: 6.2vw;
+  }
+  .greeting2 {
+    padding-left: 14vw;
   }
 
-.article-title {
-  font-size: 7.18vw;
-  margin-bottom: 5.62vw;
-}
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+  }
 
-.article-text {
-  font-size: 4.68vw;
-}
+  .button {
+    width: 87.5%;
+    height: 6.45%;
+    padding-top: 1.65%;
+    padding-bottom: 1.65%;
+    border-radius: 4.68vw;
+    font-size: 2.5vw;
+    color: #ffffff;
+  }
 
-.article {
-  padding-top: 18.75vw;
-  padding-bottom: 17.18vw;
-  padding-left: 6.25%;
-  padding-right: 6.25%;
-}
+  .button:nth-child(n + 2) {
+    margin-top: 4.37vw;
+  }
 
-.action-title {
-  font-size: 8.75vw;
-  margin-bottom: 6.87vw;
-}
+  .store-logo {
+    width: 6.87vw;
+    height: 7.5vw;
+    margin-right: 2.5vw;
+  }
 
-.action {
-  padding-top: 10.93vw;
-  padding-bottom: 25vw;
-  padding-left: 6.25%;
-  padding-right: 6.25%;
-}
+  .section-title {
+    font-size: 15.62vw;
+    height: 11.25vw;
+    margin-top: 6.88vw;
+    margin-bottom: 76.56vw;
+    padding-left: 6.25vw;
+  }
 
-.card-number {
-  top: -18.12vw;
-  left: 6.25%;
-  width: 21.87vw;
-  height: 21.87vw;
-  font-size: 4.37vw;
-  padding-top: 8.12vw;
-}
+  .athlets-section .section-title::after {
+    content: "";
+    display: inline-block;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/footballer_192.png);
+    background-repeat: no-repeat;
+    margin-left: 15.62vw;
+    width: 54.68vw;
+    height: 87.5vw;
+    background-size: 95%;
+  }
 
-.card-number::after {
-  width: 4.68vw;
-  height: 1.25vw;
-  border-radius: 0.31vw;
-}
+  .players-section .section-title::after {
+    content: "";
+    display: inline-block;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/basketballer_302.png);
+    background-repeat: no-repeat;
+    width: 93.75vw;
+    height: 84.37vw;
+    background-size: 95%;
+  }
 
-.footer {
-  height: 177.5vw;
-  background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/game_767.jpg);
-  padding-top: 31.25vw;
-  padding-bottom: 3.12vw;
-  box-sizing: border-box;
-  padding-left: 6.25%;
-  padding-right: 6.25%;
-}
+  .article-number {
+    font-size: 4.37vw;
+    margin-right: 3.12vw;
+  }
 
-.short-logo {
-  height: 23.12vw;
-  width: 22.5vw;
-  border-radius: 3.75vw;
-  padding: 3.75vw 1.87vw;
-  margin-bottom: 18.75vw;
-}
+  .article-number::after {
+    height: 1.25vw;
+    border-radius: 0.31vw;
+    background-color: #5e42b0;
+  }
 
-.download-appeal {
-  font-size: 10vw;
-  font-weight: 700;
-}
+  .article-title {
+    font-size: 7.18vw;
+    margin-bottom: 5.62vw;
+  }
 
-.appeal {
-  font-size: 4.37vw;
-  margin-bottom: 23.43vw;
-}
+  .article-text {
+    font-size: 4.68vw;
+  }
 
-.footer .download-form {
-  margin-bottom: 25vw;
-}
+  .article {
+    padding-top: 18.75vw;
+    padding-bottom: 17.18vw;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+  }
+
+  .action-title {
+    font-size: 8.75vw;
+    margin-bottom: 6.87vw;
+  }
+
+  .action {
+    padding-top: 10.93vw;
+    padding-bottom: 25vw;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+  }
+
+  .card-number {
+    top: -18.12vw;
+    left: 6.25%;
+    width: 21.87vw;
+    height: 21.87vw;
+    font-size: 4.37vw;
+  }
+
+  .card-number::after {
+    width: 4.68vw;
+    height: 1.25vw;
+    border-radius: 0.31vw;
+  }
+
+  .footer {
+    height: 177.5vw;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/game_767.jpg);
+    padding-top: 31.25vw;
+    padding-bottom: 3.12vw;
+    box-sizing: border-box;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+  }
+
+  .short-logo {
+    height: 23.12vw;
+    width: 22.5vw;
+    border-radius: 3.75vw;
+    padding: 3.75vw 1.87vw;
+    margin-bottom: 18.75vw;
+  }
+
+  .download-appeal {
+    font-size: 10vw;
+    font-weight: 700;
+  }
+
+  .appeal {
+    font-size: 4.37vw;
+    margin-bottom: 23.43vw;
+  }
+
+  .footer .download-form {
+    margin-bottom: 25vw;
+  }
 }
 
 @media (min-width: 641px) {
-  
   .header {
     height: 960px;
   }
-  
+
   .button {
     width: 311px;
     height: 77px;
     border-radius: 38px;
     font-size: 14px;
   }
-  
-    .store-logo {
+
+  .store-logo {
     width: 40px;
     height: 45px;
     margin-right: 25px;
   }
-  
+
   .download-form {
     display: flex;
     justify-content: center;
   }
-  
-  .section {
-    position: relative;
-  }
-  
-    .section-title {
+
+  .section-title {
     height: 58px;
     font-size: 80px;
-}
-  
-    .article-number {
+  }
+
+  .article-number {
     font-size: 18px;
     margin-right: 12px;
   }
-  
+
   .article-number::after {
     content: "";
     display: block;
@@ -429,19 +444,23 @@ h2, h3, h4 {
     height: 5px;
     border-radius: 2px;
   }
-  
-    .article-text {
+
+  .article-text {
     line-height: 28px;
   }
-  
-    .card-number::after { 
+
+  .articles-container > .article:nth-child(3n + 1) {
+    background-color: #ffffff;
+  }
+
+  .card-number::after {
     content: "";
     display: block;
     width: 28px;
     height: 5px;
     border-radius: 2px;
   }
-    .short-logo {
+  .short-logo {
     height: 136px;
     width: 130px;
     border-radius: 24px;
@@ -450,13 +469,12 @@ h2, h3, h4 {
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  
   .header {
-    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/football_767.jpg);
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/football_767.jpg);
   }
 
   .logo {
-    width: 26%; 
+    width: 26%;
     padding-top: 4.7%;
   }
 
@@ -487,33 +505,46 @@ h2, h3, h4 {
     margin-top: 85px;
     margin-bottom: 60px;
     padding-left: 4.16%;
+    position: relative;
+  }
+
+  .athlets-section .section-title::after {
+    content: "";
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/footballer_497.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 51.1vw;
+    top: 50px;
+    width: 530px;
+    height: 590px;
+    background-size: 95%;
+  }
+
+  .players-section .section-title::after {
+    content: "";
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/basketballer_436.png);
+    background-repeat: no-repeat;
+    width: 435px;
+    height: 550px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: 100%;
   }
 
   .athlets-section > .section-title {
     padding-left: 38.41%;
   }
 
-  .section-image {
-    position: absolute;
-  }
-
-  .footballer {
-    top: 75px;
-    right: 54.5%;
-  }
-
-  .basketballer {
-    top: -15px;
-    right: 0;
-  }
-
-  .players-section > .article-number:nth-child(3n + 5) {
+  .players-section .article-number:nth-child(3n + 3) {
     color: #8765dd;
   }
-  
+
   .article-title {
     font-size: 32px;
-  } 
+  }
 
   .article-text {
     font-size: 16px;
@@ -523,23 +554,19 @@ h2, h3, h4 {
     padding: 40px 32px;
   }
 
-  .athlets-section > .article {
+  .athlets-section .article {
     padding-left: 38.41%;
   }
 
-  .players-section > .article {
+  .players-section .article {
     padding-right: 45.18%;
-  }
-
-  .athlets-section > .article:nth-child(3n + 3) {
-    background-color: #ffffff;
   }
 
   .action-title {
     font-size: 80px;
     margin-bottom: 24px;
   }
-     
+
   .action-card-text {
     font-size: 24px;
   }
@@ -557,11 +584,10 @@ h2, h3, h4 {
     width: 116px;
     height: 116px;
     font-size: 24px;
-    padding-top: 42px;
   }
 
   .footer {
-    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/game_767.jpg);
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/game_767.jpg);
     padding-top: 125px;
     padding-left: 4.17%;
     padding-right: 4.17%;
@@ -583,7 +609,7 @@ h2, h3, h4 {
 
 @media (min-width: 961px) {
   .header {
-    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/football_1920.jpg);
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/football_1920.jpg);
     padding-left: 10.16%;
     padding-right: 10.16%;
     padding-bottom: 110px;
@@ -608,55 +634,71 @@ h2, h3, h4 {
   .button:nth-child(n + 2) {
     margin-left: 52px;
   }
-  
+
   .button:first-child {
     margin-left: calc(50% - 311px);
   }
-  
+
   .button:last-child {
     margin-right: calc(50% - 311px);
   }
 
-  .section {
-    overflow: hidden;
-  }
   .section-image {
     position: absolute;
-  }
-
-  .footballer {
-    top: 2.46vw;
-    right: 50vw;
-  }
-
-  .basketballer {
-    bottom: 2.08vw;
-    left: 42.18vw;
   }
 
   .section-title {
     margin-top: 115px;
     margin-bottom: 100px;
+    position: relative;
   }
 
-  .athlets-section > .section-title, .athlets-section >.article-title, .athlets-section>.article  {
-    padding-left: 52.34%;
+  .athlets-section .section-title::after {
+    content: "";
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/footballer_566.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 50vw;
+    top: 50px;
+    width: 545px;
+    height: 955px;
+    background-size: 95%;
   }
-  
-     .players-section > .article, .players-section > .section-title {
-     padding-left: 10.15%;
+
+  .players-section .section-title::after {
+    content: "";
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/basketballer_991.png);
+    background-repeat: no-repeat;
+    width: 980px;
+    height: 810px;
+    position: absolute;
+    left: 42.18vw;
+    top: -50px;
+    background-size: 100%;
   }
-  
-  .players-section>.article {
+
+  .athlets-section .section-title,
+  .athlets-section .article {
+    padding-left: 52.34vw;
+  }
+
+  .players-section .article,
+  .players-section .section-title {
+    padding-left: 10.15%;
+  }
+
+  .players-section .article {
     padding-right: 52.34%;
   }
-  
+
   .article {
     padding-top: 58px;
     padding-bottom: 58px;
     padding-right: 10.15%;
   }
-  
+
   .article-title {
     font-size: 36px;
     margin-bottom: 20px;
@@ -669,39 +711,39 @@ h2, h3, h4 {
   .athlets-section > .article:nth-child(3n + 3) {
     background-color: #ffffff;
   }
-  
+
   .action-section {
     display: flex;
     flex-flow: column;
   }
-    
+
   .action-container {
     display: flex;
     flex-wrap: wrap;
   }
-  
-   .action-container:nth-child(even) {
+
+  .action-container:nth-child(even) {
     flex-flow: row-reverse;
   }
-   
+
   .card {
     width: 50%;
     align-items: stretch;
   }
-  
+
   .action-image {
     margin-bottom: -5px;
   }
-    
+
   .action-title {
     font-size: 4.17vw;
     padding-bottom: 7.25%;
   }
-  
+
   .action {
     font-size: 1.25vw;
     box-sizing: border-box;
-    padding-left: 6.67% ;
+    padding-left: 6.67%;
     padding-right: 10.15%;
     padding-top: 13.54%;
   }
@@ -711,19 +753,18 @@ h2, h3, h4 {
     width: 8.75vw;
     height: 8.07vw;
     font-size: 1.25vw;
-    padding-top: 3.125vw;
   }
-  
+
   .action-container:nth-child(odd) .card-number {
     left: -4.43vw;
   }
 
   .action-container:nth-child(even) .card-number {
-    right:  -4.43vw;
+    right: -4.43vw;
   }
-  
+
   .footer {
-    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/master/sources/img/game_1920.jpg);
+    background-image: url(https://raw.githubusercontent.com/MissarvaT/netology-diploma/master/images/game_1920.jpg);
     padding-top: 225px;
     padding-bottom: 52px;
   }
@@ -732,20 +773,20 @@ h2, h3, h4 {
     display: flex;
     justify-content: center;
   }
-  
+
   .short-logo {
     margin-left: auto;
     margin-right: 40px;
   }
-  
+
   .appeal-container {
     margin-right: auto;
   }
-  
+
   .download-form {
     margin-bottom: 312px;
   }
-    
+
   .download-appeal {
     font-size: 80px;
   }
