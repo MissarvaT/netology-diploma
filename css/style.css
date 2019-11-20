@@ -93,7 +93,9 @@ p {
 }
 
 .button-name {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .store-name {
