@@ -102,6 +102,10 @@ p {
   font-weight: 700;
 }
 
+.section {
+  overflow: hidden;
+}
+
 .section-title {
   color: #e7e7e7;
   font-weight: 700;
@@ -156,10 +160,6 @@ p {
   content: "";
   display: block;
   background-color: #ffffff;
-}
-
-.action-image {
-  max-width: 100%;
 }
 
 .action-title {
@@ -357,6 +357,10 @@ p {
     padding-bottom: 25vw;
     padding-left: 6.25%;
     padding-right: 6.25%;
+  }
+
+  .action-image {
+    max-width: 100%;
   }
 
   .card-number {
@@ -564,6 +568,10 @@ p {
     padding-right: 45.18%;
   }
 
+  .action-image {
+    max-width: 100%;
+  }
+
   .action-title {
     font-size: 80px;
     margin-bottom: 24px;
@@ -643,6 +651,10 @@ p {
 
   .button:last-child {
     margin-right: calc(50% - 311px);
+  }
+
+  .article-title {
+    align-items: center;
   }
 
   .section-image {
@@ -733,17 +745,21 @@ p {
     align-items: stretch;
   }
 
+  .action-image-container {
+    overflow: hidden;
+  }
+
   .action-image {
     margin-bottom: -5px;
   }
 
   .action-title {
-    font-size: 4.17vw;
+    font-size: 80px;
     padding-bottom: 7.25%;
   }
 
   .action {
-    font-size: 1.25vw;
+    font-size: 24px;
     box-sizing: border-box;
     padding-left: 6.67%;
     padding-right: 10.15%;
@@ -798,4 +814,3 @@ p {
     margin-bottom: 165px;
   }
 }
-
