@@ -88,6 +88,10 @@ p {
   margin-right: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .store-logo {
   fill: #ffffff;
 }
@@ -641,6 +645,10 @@ p {
     margin-left: 29.43%;
   }
 
+   .button:hover {
+    background-color: #ce69ff;
+  }
+  
   .button:nth-child(n + 2) {
     margin-left: 52px;
   }
